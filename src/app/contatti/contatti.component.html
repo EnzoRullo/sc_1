@@ -1,0 +1,32 @@
+<form #theForm="ngForm" (ngSubmit)="postMessage()">
+
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input #nome="ngModel" required minlength="2" [(ngModel)]="msg.name" type="text" matInput name="nome" placeholder="Nome">
+        <mat-error *ngIf="nome.hasError('required')">Nome obbligatorio</mat-error>
+        <mat-error *ngIf="nome.hasError('minlength')">Nome non valido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input #email="ngModel" required [(ngModel)]="msg.email" type="email" matInput name="email" placeholder="E-mail" pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b">
+        <mat-error *ngIf="email.hasError('required')">E-mail obbligatoria</mat-error>
+        <mat-error *ngIf="email.hasError('pattern')">E-mail non valida</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input #telefono="ngModel" required [(ngModel)]="msg.tel" type="tel" matInput name="telefono" placeholder="Telefono" pattern="^((00|\+)39[\. ]??)??3\d{2}[\. ]??\d{6,7}$">
+        <mat-error *ngIf="telefono.hasError('required')">Numero di telefono obbligatorio</mat-error>
+        <mat-error *ngIf="telefono.hasError('pattern')">Numero di telefono non valido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Messaggio</mat-label>
+        <textarea #messaggio="ngModel" required minlength="2" [(ngModel)]="msg.message" type="text" matInput name="Messaggio" placeholder="Messaggio"></textarea>
+        <mat-error *ngIf="messaggio.hasError('minlength') || messaggio.hasError('required')">Messaggio non valido</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="theForm.form.invalid" >Invia messaggio</button>
+
+</form>

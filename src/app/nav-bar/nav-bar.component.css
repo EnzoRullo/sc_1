@@ -1,0 +1,13 @@
+nav{
+    margin: 10px auto;
+    width: 95%;
+}
+
+mat-button-toggle-group{
+    width: 100%;
+}
+
+mat-button-toggle {
+    width: calc((100%/4) - 4px);
+    margin: 2px;
+}

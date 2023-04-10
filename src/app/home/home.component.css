@@ -1,0 +1,15 @@
+table{
+    padding: 1em;
+    width: 95%;
+    margin: auto;
+}
+
+td, th{
+    width: 50%;
+    text-align: left;
+    padding: 5px 0 5px 0;
+}
+
+mat-icon{
+    padding: 0 .5em;
+}

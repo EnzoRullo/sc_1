@@ -1,0 +1,10 @@
+div{
+    background-color: rgb(46, 46, 46);
+    margin-top: 1em;
+    padding: 0 2.5%;
+}
+p{
+    width: 95%;
+    width: fit-content;
+    color: white;
+}

@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th> Nome Corso </th>
+            <th> Dettagli </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of listaCorsi">
+            <td>{{c.titolo}}</td>
+            <td>
+                <a [routerLink]="['/corsi-detail', c.id]">
+                    <mat-icon>description</mat-icon>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

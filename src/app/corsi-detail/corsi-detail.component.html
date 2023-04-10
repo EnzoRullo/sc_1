@@ -1,0 +1,46 @@
+<div>
+    <h3>ActivateRoute metodo 1</h3>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{corsoMetodo1?.titolo}}</mat-card-title>
+            <mat-card-subtitle>Docente: {{corsoMetodo1?.docente}}</mat-card-subtitle>
+        </mat-card-header>
+        <br>
+        <mat-card-content>
+            <p>Durata: {{corsoMetodo1?.durata}} ore</p>
+            <p>Inizio: {{corsoMetodo1?.data_partenza}}</p>
+            <p>Prezzo: {{corsoMetodo1?.costo == 0 ? 'Gratuito' : [corsoMetodo1?.costo] + ' € + iva'}}</p>
+            <p *ngIf="corsoMetodo1?.n_partecipanti">Numero iscritti: {{corsoMetodo1?.n_partecipanti}}</p>
+        </mat-card-content>
+    </mat-card>
+    <br>
+    <h3>ActivateRoute metodo 2 - Snapshot</h3>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{corsoMetodo2?.titolo}}</mat-card-title>
+            <mat-card-subtitle>Docente: {{corsoMetodo2?.docente}}</mat-card-subtitle>
+        </mat-card-header>
+        <br>
+        <mat-card-content>
+            <p>Durata: {{corsoMetodo2?.durata}} ore</p>
+            <p>Inizio: {{corsoMetodo2?.data_partenza}}</p>
+            <p>Prezzo: {{corsoMetodo2?.costo == 0 ? 'Gratuito' : [corsoMetodo2?.costo] + ' € + iva'}}</p>
+            <p *ngIf="corsoMetodo2?.n_partecipanti">Numero iscritti: {{corsoMetodo2?.n_partecipanti}}</p>
+        </mat-card-content>
+    </mat-card>
+    <br>
+    <h3>ActivateRoute metodo 3 - paramMap.pipe()</h3>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{corsoMetodo3?.titolo}}</mat-card-title>
+            <mat-card-subtitle>Docente: {{corsoMetodo3?.docente}}</mat-card-subtitle>
+        </mat-card-header>
+        <br>
+        <mat-card-content>
+            <p>Durata: {{corsoMetodo3?.durata}} ore</p>
+            <p>Inizio: {{corsoMetodo3?.data_partenza}}</p>
+            <p>Prezzo: {{corsoMetodo3?.costo == 0 ? 'Gratuito' : [corsoMetodo3?.costo] + ' € + iva'}}</p>
+            <p *ngIf="corsoMetodo3?.n_partecipanti">Numero iscritti: {{corsoMetodo3?.n_partecipanti}}</p>
+        </mat-card-content>
+        <br>
+    </mat-card>

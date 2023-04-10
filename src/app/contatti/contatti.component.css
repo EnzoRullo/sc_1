@@ -1,0 +1,11 @@
+form{
+    width: 70%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+textarea{
+    height: fit-content;
+}
